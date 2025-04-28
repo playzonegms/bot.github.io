@@ -54,9 +54,9 @@
         background: rgba(0, 0, 0, 0.7);
         backdrop-filter: blur(10px);
         display: flex;
-        justify-content: flex-start;
+        justify-content: space-between;
         align-items: center;
-        padding-left: 20px;
+        padding: 0 20px;
         z-index: 1000;
       }
 
@@ -65,6 +65,23 @@
         font-size: 24px;
         font-weight: 700;
         letter-spacing: 1px;
+      }
+
+      .topbar .topbar-buttons {
+        display: flex;
+        gap: 15px;
+      }
+
+      .topbar .topbar-buttons a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 16px;
+        transition: color 0.3s ease;
+      }
+
+      .topbar .topbar-buttons a:hover {
+        color: #43b581;
       }
 
       .bot-logo {
@@ -214,11 +231,53 @@
       footer .footer-links a:hover {
         text-decoration: underline;
       }
+
+      /* Mobile Support */
+      @media (max-width: 768px) {
+        .topbar {
+          flex-direction: column;
+          padding: 10px;
+          text-align: center;
+        }
+
+        .topbar h1 {
+          margin-bottom: 10px;
+        }
+
+        .topbar .topbar-buttons {
+          flex-direction: column;
+          gap: 10px;
+        }
+
+        .main h2 {
+          font-size: 32px;
+        }
+
+        .main p {
+          font-size: 16px;
+        }
+
+        .functions ul {
+          padding-left: 20px;
+        }
+
+        .buttons {
+          flex-direction: column;
+        }
+
+        .buttons button {
+          width: 100%;
+        }
+      }
     </style>
   </head>
   <body>
     <div class="topbar">
       <h1>Quantum</h1>
+      <div class="topbar-buttons">
+        <a href="Commands">Comandos</a>
+        <a href="Contact">Contacto</a>
+      </div>
     </div>
 
     <img
